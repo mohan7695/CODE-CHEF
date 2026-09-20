@@ -1,0 +1,15 @@
+//import java.util.
+public static long stringToNumber(String str) {
+    
+int n=str.length();
+long sum=0;
+for(int i=0;i<n;i++){
+    char g=str.charAt(i);
+    
+    int change = g-'0';
+    
+    sum=sum*10+change;
+}
+return sum;
+
+}
