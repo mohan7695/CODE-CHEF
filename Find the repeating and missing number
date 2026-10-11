@@ -1,0 +1,30 @@
+ import java.util.*;
+class Solution {
+    public int[] findRepeatingAndMissing(int[] arr) {
+        // write your code here
+     
+   
+     int n=arr.length;
+    
+      int d=-1;
+     int r=-1;
+
+        int[] freq = new int[n+1];
+        
+        for(int ne : arr){
+            freq[ne]++;
+            
+        }
+        for(int i=1;i<=n;i++){
+             if(freq[i] == 2){
+                 r=i;
+             }else if(freq[i] == 0){
+                 d=i;
+             }
+        }
+     
+          return new int[]{r,d};
+     
+     
+    }
+}
